@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Cotización - TechPro Soluciones IT</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="Logotipo Oficial de TechPro Soluciones IT" width="100">
+        <h1>TechPro Soluciones IT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios y Planes</a></li>
+                <li><a href="contacto.html">Contacto y Cotización</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <h2>Solicitud de Presupuesto y Cotización Online</h2>
+        <p>Complete el siguiente formulario y un asesor técnico le responderá en menos de 24 horas.</p>
+ 
+        <form action="/procesar-cotizacion" method="POST">
+            <fieldset>
+                <legend>1. Información del Solicitante</legend>
+                
+                <label for="nombre">Nombre y Apellido:</label><br>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez"><br><br>
+ 
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required placeholder="usuario@empresa.com.py"><br><br>
+ 
+                <label for="tel">Teléfono / WhatsApp:</label><br>
+                <input type="tel" id="tel" name="telefono" placeholder="+595 981 123456">
+            </fieldset>
+ 
+            <br>
+ 
+            <fieldset>
+                <legend>2. Especificaciones del Requerimiento</legend>
+ 
+                <label for="servicio">Servicio Solicitado:</label><br>
+                <select id="servicio" name="servicio" required>
+                    <option value="web">Desarrollo Web & Portales Corporativos</option>
+                    <option value="cloud">Infraestructura Cloud & PostgreSQL</option>
+                    <option value="soporte">Planes de Soporte y Mantenimiento 24/7</option>
+                    <option value="auditoria">Auditoría Informática y Seguridad</option>
+                </select><br><br>
+ 
+                <p>Modalidad de Contratación:</p>
+                <input type="radio" id="unico" name="modalidad" value="unico" checked>
+                <label for="unico">Proyecto cerrado (Pago único)</label><br>
+                <input type="radio" id="mensual" name="modalidad" value="mensual">
+                <label for="mensual">Abono mensual continuo</label><br><br>
+ 
+                <label for="consulta">Descripción del Proyecto:</label><br>
+                <textarea id="consulta" name="detalles" rows="4" cols="45" placeholder="Detalle cantidad de secciones o módulos requeridos..."></textarea><br><br>
+ 
+                <input type="checkbox" id="terminos" name="acepto_terminos" required>
+                <label for="terminos">Declaro que los datos son verídicos y acepto recibir la cotización formal.</label>
+            </fieldset>
+ 
+            <br>
+            <button type="submit">Enviar Solicitud de Cotización</button>
+            <button type="reset">Limpiar Formulario</button>
+        </form>
+    </main>
+ 
+    <footer>
+        <p>© 2026 TechPro Soluciones IT - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
